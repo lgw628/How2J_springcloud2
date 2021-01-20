@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: index-config-server
+  cloud:
+    config:
+      label: master
+      server:
+       git:
+         #git地址
+         uri: https://github.com/zhuyanxue/sudyconfig.git
+         #文件所属目录
+         search-paths: qinyan
+         default-label: main
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

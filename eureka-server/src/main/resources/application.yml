@@ -1,0 +1,16 @@
+#配置这个微服务的名称
+spring:
+  application:
+    name: eureka-server
+
+#配置eureka server注册中心服务的相关信息
+#hostname(主机名称),register-with-eureka(不注册到服务器，因为它本身就是服务器),fetch-registry(是否获取注册信息，为服务器不注册),
+#service-url(自己作为服务器公布出来的地址，后续的微服务注册到服务中心，就是要用这个地址)
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>cn.qinyan</groupId>
+  <artifactId>invest</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>eureka-server</module>
+      <module>third-part-data</module>
+      <module>collection-store-data-server</module>
+      <module>index-code-server</module>
+      <module>index-datas-server</module>
+      <module>inddex-zuul-server</module>
+      <module>trend-back-test-server</module>
+      <module>trend-back-test-view</module>
+      <module>view-config-server</module>
+  </modules>
+  <name>invest</name>
+
+  <!-- 父项目的打包方式 -->
+  <packaging>pom</packaging>
+
+  <!-- 使用springboot2.0.3版本 -->
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.0.3.RELEASE</version>
+    <relativePath/>
+  </parent>
+
+  <!-- 使用springcloud的finchley版本 -->
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <java.version>1.8</java.version>
+    <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+  </properties>
+
+  <dependencies>
+    <!-- 测试类，包含了junit -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- 工具类 -->
+    <dependency>
+      <groupId>cn.hutool</groupId>
+      <artifactId>hutool-all</artifactId>
+      <version>4.3.1</version>
+    </dependency>
+
+    <!-- lombok -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+    </dependency>
+
+    <!--zipkin,服务链路追踪-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-zipkin</artifactId>
+    </dependency>
+
+
+  </dependencies>
+
+  <!-- 这里的配置让子项目不需要再指定版本号 -->
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+</project>

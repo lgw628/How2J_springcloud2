@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/collection-store-data-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/inddex-zuul-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/index-code-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/index-datas-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/third-part-data/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/trend-back-test-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/trend-back-test-view/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/view-config-server/src/main/java" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,10 @@
+# Project exclude paths
+/collection-store-data-server/target/
+/eureka-server/target/
+/inddex-zuul-server/target/
+/index-code-server/target/
+/index-datas-server/target/
+/third-part-data/target/
+/trend-back-test-server/target/
+/trend-back-test-view/target/
+/view-config-server/target/
